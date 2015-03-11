@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  time_last_run: 2015-03-11 14:39:06
+  description: MyText
+  state: 1
+  path: MyString
+  type: 1
+
+two:
+  name: MyString
+  time_last_run: 2015-03-11 14:39:06
+  description: MyText
+  state: 1
+  path: MyString
+  type: 1

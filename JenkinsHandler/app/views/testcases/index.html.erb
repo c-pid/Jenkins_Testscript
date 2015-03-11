@@ -1,0 +1,30 @@
+<h1>Listing Testcases</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Time_last_run</th>
+    <th>Description</th>
+    <th>State</th>
+    <th>Path</th>
+    <th>Type</th>
+  </tr>
+ 
+  <% @testcases.each do |testcase| %>
+    <tr>
+      <td><%= testcase.name %></td>
+	  <td><%= testcase.time_last_run.to_s %></td>
+	  <td><%= testcase.description %></td>
+	  <td><%= testcase.state.to_s %></td>
+	  <td><%= testcase.path %></td>
+	  <td><%= testcase.test_type.to_s %></td>
+      <td><%= link_to 'Edit', edit_testcase_path(testcase) %></td>
+      <td><%= link_to 'Destroy', testcase_path(testcase),
+              method: :delete %></td>
+    </tr>
+  <% end %>
+  
+  
+</table>
+
+<%= link_to 'New', new_testcase_path %> <%= link_to 'Update', jenkins_update_path %><br>
